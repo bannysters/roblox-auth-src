@@ -24,4 +24,4 @@ Use at your own risk. No support or updates will be provided.
 
 ---
 
-If you need a matching `.env` example or install instructions later, let me know. I can be contacted on discord @bannisters
+If you have any questions, I can be contacted on discord @bannisters
