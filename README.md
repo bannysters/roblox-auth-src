@@ -1,4 +1,4 @@
-## 9AUTH (Source code dump/archive)
+## Roblox script auth service (Codebase Dump/Archive)
 
 My old Discord-based script authentication and panel system for Roblox script devs to manage keys, distribute scripts, and handle HWID-based user access with Discord OAuth and bot interactions.
 
