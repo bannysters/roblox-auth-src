@@ -1,0 +1,69 @@
+<%- include('partials/layout', { title: 'Payment', user, body: `
+  <div class="min-h-screen flex items-center justify-center bg-gray-900 px-4">
+    <div class="bg-gray-800 p-10 rounded-3xl shadow-xl w-full max-w-md">
+      <header class="flex items-center mb-8">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c.828 0 1.5.672 1.5 1.5S12.828 14 12 14s-1.5-.672-1.5-1.5S11.172 11 12 11zm6 0V7a6 6 0 10-12 0v4H4v10h16V11h-2zm-8 0V7a4 4 0 118 0v4H10z" />
+        </svg>
+        <h1 class="text-3xl font-extrabold text-white">Payment</h1>
+      </header>
+      <p class="text-gray-400 mb-6">Complete the steps below to unlock your dashboard:</p>
+
+      <ol class="space-y-6 mb-8">
+        <li class="flex flex-col items-start space-y-2">
+            <div class="flex items-center space-x-2">
+              <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-500 text-white font-semibold">1</div>
+              <label for="payment-method" class="text-gray-200 font-medium">Pick a Payment Method:</label>
+              <select id="payment-method" class="ml-2 bg-gray-700 text-gray-200 rounded px-2 py-1 focus:outline-none">
+                <option value="cashapp">Cash App</option>
+                <option value="paypal">PayPal</option>
+              </select>
+            </div>
+            <p id="payment-instruction" class="ml-10 text-gray-200">
+                $n9vo
+            </p>
+          </li>
+        <li class="flex items-start">
+          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-500 text-white font-semibold">2</div>
+          <p class="ml-4 text-gray-200">Add a note like <em>"Dashboard Access"</em>.</p>
+        </li>
+        <li class="flex items-start">
+          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-500 text-white font-semibold">3</div>
+          <p class="ml-4 text-gray-200">Send $ ( PRICE TO BE DETERMINED) to your prefered <span class="font-medium text-white">payment method.</span></p>
+        </li>
+        <li class="flex items-start">
+          <div class="flex-shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-blue-500 text-white font-semibold">4</div>
+          <p class="ml-4 text-gray-200">You will receive a DM on Discord once your payment goes through. After that, you can return to this site to access your dashboard.</p>
+        </li>
+
+      </ol>
+
+
+      <section aria-labelledby="user-info" class="bg-gray-900 p-6 rounded-lg mt-8">
+        <h2 id="user-info" class="text-lg font-semibold text-white mb-2">Your Information</h2>
+        <dl class="text-gray-400">
+          <dt class="font-medium">Discord ID</dt>
+          <dd class="mb-4 text-white">${user.id}</dd>
+          <dt class="font-medium">Discord Username</dt>
+          <dd class="text-white">${user.username}</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="support" class="text-center mt-6">
+        <p class="text-gray-400 mb-2">Need help?</p>
+        <a href="https://discord.com/users/827215467587436595" class="inline-block text-blue-500 hover:underline font-medium">Contact bannisters on Discord</a>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('payment-method').addEventListener('change', function(e) {
+      const instr = document.getElementById('payment-instruction');
+      if (e.target.value === 'paypal') {
+        instr.innerHTML = 'voidwarepayments@gmail.com (F&amp;F)';
+      } else {
+        instr.innerHTML = '$n9vo';
+      }
+    });
+  </script>
+` }) %>

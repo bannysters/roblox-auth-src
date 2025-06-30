@@ -1,0 +1,1 @@
+ngrok http --domain=9auth.xyz 3000

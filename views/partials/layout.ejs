@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title><%= title %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <link rel="icon" href="../../icon.png" type="image/png">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 overflow-auto relative">
+
+  <!-- Background Particles -->
+  <div id="particles-js"></div>
+
+  <!-- Glassy Header -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800/60 backdrop-blur-sm text-white p-4 shadow-md z-20 transition-all duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="/" class="text-2xl font-extrabold tracking-wide hover:text-blue-400 transition">9auth</a>
+      <div>
+        <% if (user) { %>
+          <a href="/logout" class="text-sm text-gray-300 hover:text-white transition">Logout</a>
+        <% } else { %>
+          <a href="/auth/login" class="text-sm text-gray-300 hover:text-white transition">Login</a>
+        <% } %>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Centered Page Content -->
+  <main class="flex items-center justify-center min-h-screen w-full px-4 pt-20 pb-10">
+    <div class="w-full max-w-4xl mx-auto">
+      <%- body %>
+    </div>
+  </main>
+
+  <!-- Particles Config -->
+  <script>
+    window.onload = () => {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 }},
+          "color": { "value": "#ffffff" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.2, "random": true },
+          "size": { "value": 3, "random": true },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#ffffff",
+            "opacity": 0.1,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 1.5,
+            "direction": "none",
+            "out_mode": "out"
+          }
+        },
+        "interactivity": {
+          "events": {
+            "onhover": { "enable": true, "mode": "repulse" },
+            "onclick": { "enable": true, "mode": "push" }
+          },
+          "modes": {
+            "repulse": { "distance": 100, "duration": 0.4 },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    };
+  </script>
+  
+</body>
+</html>

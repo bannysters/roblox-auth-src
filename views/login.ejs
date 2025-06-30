@@ -1,0 +1,86 @@
+<%- include('partials/layout', { title: 'Login', user: null, body: `
+<section class="min-h-screen flex flex-col justify-center bg-gray-900 py-12">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch justify-items-center">
+
+
+      <div class="flex flex-col justify-between justify-center p-8 bg-gradient-to-tr from-gray-800 via-gray-900 to-black bg-opacity-80 rounded-2xl shadow-2xl transform transition-transform hover:scale-105">
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
+          Welcome to <span class="text-blue-400">9auth</span>
+        </h1>
+
+        <p class="text-gray-300 text-center my-6">
+          9auth delivers an automated, server-side script loader with HWID-locked execution and support for both internal &amp; external executors.  
+          Experience industry-leading anti-hooking and anti-tamper defenses—complete with persistent crack-protection and real-time tamper detection—fully integrated into your scripts.  
+          <br><br>
+          - made by bannisters
+        </p>
+
+        <a href="/auth/login"
+          class="w-full inline-block text-center bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 rounded-xl shadow-md transition-transform transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900">
+          Login with Discord
+        </a>
+      </div>
+
+      <div class="p-8 bg-gradient-to-bl from-gray-800 via-gray-900 to-black bg-opacity-80 rounded-2xl shadow-2xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-100 text-center mb-6">
+          Key Features
+        </h2>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Modern, easy-to-use Roblox script authentication dashboard at 9auth.xyz</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Keygen, script uploads, user management, and HWID-locked execution—fully automated</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Dynamic + multi-layer encryption & secure encoding</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Advanced obfuscation: array wrapping, virtualization, string splitting, proxied variables &amp; bit-level checksums, etc</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Automated, server-side script loader with HWID and executor support (internal &amp; external)</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">AMAZING antihooking &amp; antitamper + persistent crack-protection and dynamic tamper detection</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <svg class="w-6 h-6 flex-shrink-0 text-blue-400 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-200">Fully serverside, automated &amp; dynamic crack-protection built into your scripts</span>
+          </li>
+        </ul>
+        
+      </div>
+
+    </div>
+
+
+
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+      <p>© 2025 <span class="font-semibold">9auth</span>. Built by bannisters</p>
+    </footer>
+
+  </div>
+</section>
+` }) %>
